@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'com.bloomberg.jrubytest.Main'
+
+import org.jruby.Main as JRuby
+
+// jrubyVersion = '1.7.19'
+
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'org.jruby.embed:jruby-embed:0.1.2' // See Notes
+  }
+}
+
+dependencies {
+  compile "org.jruby:jruby-complete:1.7.19"
+}
+
+repositories {
+    mavenCentral()
+}
+
